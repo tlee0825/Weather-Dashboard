@@ -88,8 +88,8 @@ function getCurrentForecast(response) {
             forecastEls[i].innerHTML = "";
             const forecastIndex = i*8 + 4;
             const forecastDate = new Date(response.list[forecastIndex].dt * 1000);
-            let forecastDay = forecastDate.getDate() + 1;
-            const forecastMonth = forecastDate.getMonth();
+            let forecastDay = forecastDate.getDate();
+            const forecastMonth = forecastDate.getMonth() + 1;
             const forecastYear = forecastDate.getFullYear();
             const forecastDateEl = document.createElement("p");
 
@@ -138,7 +138,7 @@ function renderSearchHistory() {
 
 renderSearchHistory();
     if (searchHistory.length > 0) {
-        getCurrentForecast(searchHistory[searchHistory.length - 1]);
+        getCurrentForecast(searchHistory[searchHistory.length ]);
     }
 
 function k2f(K) {
