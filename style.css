@@ -1,0 +1,10 @@
+.navbar {
+    justify-content: center;
+    position: sticky;
+}
+.hide {
+    display: none;
+}
+.show {
+    display: block;
+}
